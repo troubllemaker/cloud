@@ -1,0 +1,22 @@
+server:
+  port: 7000
+eureka:
+  server:
+    enableSelfPreservation: false
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://ek1.com:7000/eureka/
+  instance:
+    hostname: ek1.com
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+spring:
+  security:
+    user:
+      name: root
+      password: root
